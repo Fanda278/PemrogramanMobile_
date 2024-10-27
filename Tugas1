@@ -1,0 +1,34 @@
+class Mobil {
+  // Fields
+  String merek;
+  int tahun;
+
+  // Constructor dengan this keyword
+  Mobil(this.merek, this.tahun);
+
+  // Method pertama
+  void tampilkanInfo(String warna, int kecepatan, String tipeBahanBakar) {
+    print('Merek Mobil: $merek');
+    print('Tahun: $tahun');
+    print('Warna: $warna');
+    print('Kecepatan: ${kecepatan} km/jam');
+    print('Tipe Bahan Bakar: $tipeBahanBakar');
+  }
+
+  // Method kedua
+  void kalkulasiUsia(int tahunSaatIni, String pemilik, double hargaAwal) {
+    int usia = tahunSaatIni - tahun;
+    print('Pemilik Mobil: $pemilik');
+    print('Usia Mobil: $usia tahun');
+    print('Harga Awal: Rp$hargaAwal juta');
+  }
+}
+
+void main() {
+  // Membuat objek dari kelas Mobil
+  var mobil1 = Mobil('Toyota', 2015);
+
+  // Memanggil method
+  mobil1.tampilkanInfo('Merah', 120, 'Bensin');
+  mobil1.kalkulasiUsia(2024, 'Andi', 250.0);
+}
